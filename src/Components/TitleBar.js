@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import { 
 	AppBar, 
@@ -55,7 +56,7 @@ class TitleBar extends Component {
 				<Drawer anchor='left' open={ this.state.leftMenu } onClose={toggleDrawer(false)} >
 					<div role="presentation" className="leftMenu" onClick={toggleDrawer(false)}  onKeyDown={toggleDrawer(false)}>
 						<List>
-							<ListItem button key="Home">
+							<ListItem button component={Link} to="/">
 						    	<ListItemIcon>
 						    		<InboxIcon /> 
 						    	</ListItemIcon>
@@ -64,7 +65,7 @@ class TitleBar extends Component {
 						</List>
 						<Divider />
 						<List>
-							<ListItem button key="About">
+							<ListItem button component={Link} to="/about">
 						    	<ListItemIcon>
 						    		<MailIcon />
 						    	</ListItemIcon>
