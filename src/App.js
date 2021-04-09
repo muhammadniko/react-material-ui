@@ -1,8 +1,7 @@
 import { Component } from 'react';
-import { Container } from '@material-ui/core';  
 
-import TitleBar from './layout/TitleBar';
-import HomeView from './view/Home';
+import TitleBar from './Components/TitleBar';
+import HomeView from './Views/Home';
 
 class App extends Component {
 
@@ -11,9 +10,7 @@ class App extends Component {
             <div>
                 <TitleBar appName = "React App" />
                 <br/><br/>
-                <Container>
-                    <HomeView/>
-                </Container>
+                <HomeView/>
             </div>
         );  
     }
